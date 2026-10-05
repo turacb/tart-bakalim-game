@@ -1,0 +1,6 @@
+services:
+  - type: web
+    runtime: static
+    name: tart-bakalim
+    buildCommand: echo Static site ready
+    staticPublishPath: ./public
