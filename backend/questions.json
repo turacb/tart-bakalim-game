@@ -198,5 +198,85 @@
   "cesit-stapler-01": {
     "grams": 180,
     "category": "KIRTASİYE"
+  },
+  "cesit-dualsense-01": {
+    "grams": 280,
+    "category": "OYUN VE ELEKTRONİK"
+  },
+  "cesit-headphones-01": {
+    "grams": 250,
+    "category": "ELEKTRONİK"
+  },
+  "cesit-earbuds-01": {
+    "grams": 55,
+    "category": "ELEKTRONİK"
+  },
+  "cesit-powerbank-01": {
+    "grams": 220,
+    "category": "ELEKTRONİK"
+  },
+  "cesit-keyboard-01": {
+    "grams": 700,
+    "category": "ELEKTRONİK"
+  },
+  "cesit-tablet-01": {
+    "grams": 480,
+    "category": "ELEKTRONİK"
+  },
+  "cesit-speaker-01": {
+    "grams": 550,
+    "category": "ELEKTRONİK"
+  },
+  "cesit-camera-01": {
+    "grams": 650,
+    "category": "ELEKTRONİK"
+  },
+  "cesit-smartwatch-01": {
+    "grams": 50,
+    "category": "KİŞİSEL EŞYALAR"
+  },
+  "cesit-sunglasses-01": {
+    "grams": 30,
+    "category": "KİŞİSEL EŞYALAR"
+  },
+  "cesit-wallet-01": {
+    "grams": 80,
+    "category": "KİŞİSEL EŞYALAR"
+  },
+  "cesit-backpack-01": {
+    "grams": 450,
+    "category": "ÇANTA VE AKSESUAR"
+  },
+  "cesit-handbag-01": {
+    "grams": 600,
+    "category": "ÇANTA VE AKSESUAR"
+  },
+  "cesit-belt-01": {
+    "grams": 150,
+    "category": "GİYİM"
+  },
+  "cesit-slipper-01": {
+    "grams": 110,
+    "category": "GİYİM"
+  },
+  "cesit-bath-towel-01": {
+    "grams": 450,
+    "category": "EV TEKSTİLİ"
+  },
+  "cesit-pillow-01": {
+    "grams": 700,
+    "category": "EV TEKSTİLİ"
+  },
+  "cesit-blanket-01": {
+    "grams": 600,
+    "category": "EV TEKSTİLİ"
+  },
+  "cesit-iron-01": {
+    "grams": 1200,
+    "category": "EV ALETLERİ"
+  },
+  "cesit-toaster-01": {
+    "grams": 1500,
+    "category": "EV ALETLERİ"
   }
 }
