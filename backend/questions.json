@@ -138,5 +138,65 @@
   "cesit-paperroll-01": {
     "grams": 240,
     "category": "KÂĞIT ÜRÜNLERİ"
+  },
+  "cesit-hammer-01": {
+    "grams": 600,
+    "category": "EL ALETLERİ"
+  },
+  "cesit-pliers-01": {
+    "grams": 260,
+    "category": "EL ALETLERİ"
+  },
+  "cesit-drill-01": {
+    "grams": 1500,
+    "category": "EL ALETLERİ"
+  },
+  "cesit-tape-measure-01": {
+    "grams": 220,
+    "category": "EL ALETLERİ"
+  },
+  "cesit-phone-01": {
+    "grams": 180,
+    "category": "ELEKTRONİK"
+  },
+  "cesit-laptop-01": {
+    "grams": 1400,
+    "category": "ELEKTRONİK"
+  },
+  "cesit-remote-01": {
+    "grams": 100,
+    "category": "ELEKTRONİK"
+  },
+  "cesit-football-01": {
+    "grams": 430,
+    "category": "SPOR"
+  },
+  "cesit-basketball-01": {
+    "grams": 620,
+    "category": "SPOR"
+  },
+  "cesit-dumbbell-01": {
+    "grams": 2000,
+    "category": "SPOR"
+  },
+  "cesit-umbrella-01": {
+    "grams": 300,
+    "category": "EV EŞYALARI"
+  },
+  "cesit-hairdryer-01": {
+    "grams": 550,
+    "category": "EV ALETLERİ"
+  },
+  "cesit-kettle-01": {
+    "grams": 800,
+    "category": "EV ALETLERİ"
+  },
+  "cesit-pan-01": {
+    "grams": 700,
+    "category": "MUTFAK"
+  },
+  "cesit-stapler-01": {
+    "grams": 180,
+    "category": "KIRTASİYE"
   }
 }
