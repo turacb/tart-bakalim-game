@@ -1,21 +1,142 @@
 {
-  "muz-01": 160,
-  "elma-01": 180,
-  "cakmak-01": 22,
-  "limon-01": 120,
-  "yumurta-01": 60,
-  "domates-01": 130,
-  "patates-01": 230,
-  "portakal-01": 180,
-  "avokado-01": 220,
-  "sabun-01": 100,
-  "dis-fircasi-01": 20,
-  "kupa-01": 330,
-  "kasik-01": 45,
-  "kalem-01": 12,
-  "anahtar-01": 8,
-  "aa-pil-01": 24,
-  "tenis-topu-01": 58,
-  "kitap-01": 340,
-  "fare-01": 90
+  "muz-01": {
+    "grams": 160,
+    "category": "MEYVE"
+  },
+  "elma-01": {
+    "grams": 180,
+    "category": "MEYVE"
+  },
+  "cakmak-01": {
+    "grams": 22,
+    "category": "CEP EŞYALARI"
+  },
+  "limon-01": {
+    "grams": 120,
+    "category": "MEYVE"
+  },
+  "yumurta-01": {
+    "grams": 60,
+    "category": "MUTFAK"
+  },
+  "domates-01": {
+    "grams": 130,
+    "category": "SEBZE"
+  },
+  "patates-01": {
+    "grams": 230,
+    "category": "SEBZE"
+  },
+  "portakal-01": {
+    "grams": 180,
+    "category": "MEYVE"
+  },
+  "avokado-01": {
+    "grams": 220,
+    "category": "MEYVE"
+  },
+  "sabun-01": {
+    "grams": 100,
+    "category": "EV EŞYALARI"
+  },
+  "dis-fircasi-01": {
+    "grams": 20,
+    "category": "KİŞİSEL BAKIM"
+  },
+  "kupa-01": {
+    "grams": 330,
+    "category": "MUTFAK"
+  },
+  "kasik-01": {
+    "grams": 45,
+    "category": "MUTFAK"
+  },
+  "kalem-01": {
+    "grams": 12,
+    "category": "KIRTASİYE"
+  },
+  "anahtar-01": {
+    "grams": 8,
+    "category": "CEP EŞYALARI"
+  },
+  "aa-pil-01": {
+    "grams": 24,
+    "category": "ELEKTRONİK"
+  },
+  "tenis-topu-01": {
+    "grams": 58,
+    "category": "SPOR"
+  },
+  "kitap-01": {
+    "grams": 340,
+    "category": "KIRTASİYE"
+  },
+  "fare-01": {
+    "grams": 90,
+    "category": "ELEKTRONİK"
+  },
+  "cesit-tshirt-01": {
+    "grams": 180,
+    "category": "GİYİM"
+  },
+  "cesit-jeans-01": {
+    "grams": 650,
+    "category": "GİYİM"
+  },
+  "cesit-hoodie-01": {
+    "grams": 600,
+    "category": "GİYİM"
+  },
+  "cesit-sneaker-01": {
+    "grams": 320,
+    "category": "GİYİM"
+  },
+  "cesit-beanie-01": {
+    "grams": 90,
+    "category": "GİYİM"
+  },
+  "cesit-tire-01": {
+    "grams": 9000,
+    "category": "TAŞITLAR"
+  },
+  "cesit-bicycle-01": {
+    "grams": 14000,
+    "category": "TAŞITLAR"
+  },
+  "cesit-car-01": {
+    "grams": 1300000,
+    "category": "TAŞITLAR"
+  },
+  "cesit-scooter-01": {
+    "grams": 110000,
+    "category": "TAŞITLAR"
+  },
+  "cesit-helmet-01": {
+    "grams": 1500,
+    "category": "KORUYUCU EKİPMAN"
+  },
+  "cesit-water-01": {
+    "grams": 998,
+    "category": "SIVILAR"
+  },
+  "cesit-oil-01": {
+    "grams": 920,
+    "category": "SIVILAR"
+  },
+  "cesit-glycerol-01": {
+    "grams": 1261,
+    "category": "SIVILAR"
+  },
+  "cesit-ethanol-01": {
+    "grams": 790,
+    "category": "SIVILAR"
+  },
+  "cesit-toiletroll-01": {
+    "grams": 110,
+    "category": "KÂĞIT ÜRÜNLERİ"
+  },
+  "cesit-paperroll-01": {
+    "grams": 240,
+    "category": "KÂĞIT ÜRÜNLERİ"
+  }
 }

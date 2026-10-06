@@ -22,6 +22,28 @@ schema_lock = threading.Lock()
 schema_ready = False
 
 
+def varied_deck():
+    rng = random.SystemRandom()
+    groups = {}
+    for card_id, card in TARGETS.items():
+        groups.setdefault(card["category"], []).append(card_id)
+    for cards in groups.values():
+        rng.shuffle(cards)
+    deck = []
+    previous = None
+    while groups:
+        categories = list(groups)
+        rng.shuffle(categories)
+        if len(categories) > 1 and categories[0] == previous:
+            categories[0], categories[1] = categories[1], categories[0]
+        for category in categories:
+            deck.append(groups[category].pop())
+            if not groups[category]:
+                del groups[category]
+            previous = category
+    return deck
+
+
 def database():
     global schema_ready
     if not DATABASE_URL:
@@ -168,8 +190,7 @@ def start():
     if not 2 <= len(name) <= 20 or any(ord(c) < 32 for c in name):
         return error("Oyuncu adı 2–20 karakter olmalı.")
     now = datetime.now(timezone.utc)
-    deck = list(TARGETS)
-    random.SystemRandom().shuffle(deck)
+    deck = varied_deck()
     session_id = uuid4()
     with database() as conn:
         with conn.cursor() as cur:
@@ -186,7 +207,7 @@ def guess():
     session_id = run_id(data)
     value = data.get("guess")
     risk = data.get("risk", False)
-    if session_id is None or type(value) is not int or not 1 <= value <= 99999 or type(risk) is not bool:
+    if session_id is None or type(value) is not int or not 1 <= value <= 9999999 or type(risk) is not bool:
         return error("Geçersiz tahmin.")
     now = datetime.now(timezone.utc)
     with database() as conn:
@@ -203,7 +224,7 @@ def guess():
                 return error("Risk hakkı kullanıldı.", 409)
             card_id = json.loads(run["deck"])[run["deck_index"]]
             speed_seconds = max(0.0, 15 - (now - run["question_started_at"]).total_seconds())
-            result = grade(value, TARGETS[card_id], speed_seconds, risk, run["combo"])
+            result = grade(value, TARGETS[card_id]["grams"], speed_seconds, risk, run["combo"])
             score = run["score"] + result["points"]
             answered = run["answered"] + 1
             close_count = run["close_count"] + int(result["near"])
@@ -211,7 +232,7 @@ def guess():
                 UPDATE runs SET score=%s, answered=%s, close_count=%s, combo=%s,
                     risk_used=%s, awaiting_next=true WHERE id=%s
             """, (score, answered, close_count, result["nextCombo"], run["risk_used"] or risk, session_id))
-    return jsonify(**result, target=TARGETS[card_id], score=score, answered=answered,
+    return jsonify(**result, target=TARGETS[card_id]["grams"], score=score, answered=answered,
                    close_count=close_count, risk_available=not (run["risk_used"] or risk),
                    seconds_left=speed_seconds)
 
