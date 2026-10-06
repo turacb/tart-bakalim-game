@@ -62,6 +62,33 @@
 button:focus-visible,summary:focus-visible{outline:3px solid #6259e8;outline-offset:4px}
 @media(max-height:700px){.screen{padding-top:16px}.start-art{width:72px;height:72px;margin:13px auto}.start-art span:first-child{font-size:48px}.start-screen h1{font-size:34px}.question-image{height:160px;min-height:150px}.keypad button{min-height:40px}.reveal-image{height:100px}.earned-points{margin:13px 0}.reveal-screen .primary-button{margin-top:12px}}
 
+/* Give the photograph all space left after the game controls. */
+.question-screen{height:max(690px,100svh);min-height:690px;padding:14px 16px max(12px,env(safe-area-inset-bottom))}
+.question-screen> *{flex-shrink:0}
+.question-screen .top-stats{margin-top:8px;align-items:center}
+.question-screen .top-stats>div:first-child{display:flex;align-items:baseline;gap:8px}
+.question-screen .top-stats strong{font-size:25px}
+.question-screen .timer-box strong{font-size:27px}
+.question-screen .time-track{height:5px;margin-top:5px}
+.question-screen .question-copy{margin-top:10px}
+.question-screen .question-copy h2{font-size:21px;line-height:1.15;margin:4px 0}
+.question-screen .detail{font-size:11px;line-height:1.35}
+.question-screen .question-photo{flex:1 1 0;min-height:165px;margin-top:10px;border-radius:20px;overflow:hidden}
+.question-screen .question-image{width:100%;height:100%;min-height:0;object-fit:contain;border:0;border-radius:20px;background:#e9dfd6}
+.question-screen .answer-panel{margin-top:8px;padding:8px 12px;min-height:43px}
+.question-screen .guess-display{font-size:26px}
+.question-screen .risk-button{min-height:32px;margin:7px 0 9px}
+.question-screen .keypad{margin-top:0;gap:6px}
+.question-screen .keypad button{height:44px;min-height:44px;font-size:21px}
+.question-screen .input-message{min-height:14px;margin:5px 0 0;line-height:1.25}
+.reveal-screen .reveal-image{height:clamp(160px,27svh,250px)}
+.form-message:empty{min-height:0;margin:5px 0}
+.start-screen .start-art{width:74px;height:74px;margin:14px auto}
+.start-screen .start-art span:first-child{font-size:48px}
+.start-screen h1{font-size:35px}
+@media(min-width:600px){.question-screen{height:max(780px,90svh);min-height:780px}}
+@media(max-height:700px){.question-screen{padding-top:10px}.question-screen .question-copy h2{font-size:20px}.question-screen .question-photo{min-height:160px}}
+
 </style>
 </head>
 <body>
