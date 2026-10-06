@@ -558,5 +558,85 @@
   "cesit-compactmirror-01": {
     "grams": 70,
     "category": "KİŞİSEL EŞYALAR"
+  },
+  "cesit-wrench-01": {
+    "grams": 450,
+    "category": "ALETLER"
+  },
+  "cesit-handsaw-01": {
+    "grams": 500,
+    "category": "ALETLER"
+  },
+  "cesit-shovel-01": {
+    "grams": 1800,
+    "category": "BAHÇE"
+  },
+  "cesit-plunger-01": {
+    "grams": 250,
+    "category": "EV EŞYALARI"
+  },
+  "cesit-solderingiron-01": {
+    "grams": 150,
+    "category": "ALETLER"
+  },
+  "cesit-fireextinguisher-01": {
+    "grams": 9000,
+    "category": "GÜVENLİK"
+  },
+  "cesit-wheelchair-01": {
+    "grams": 15000,
+    "category": "ULAŞIM"
+  },
+  "cesit-stroller-01": {
+    "grams": 8000,
+    "category": "ULAŞIM"
+  },
+  "cesit-yogamat-01": {
+    "grams": 900,
+    "category": "SPOR"
+  },
+  "cesit-frisbee-01": {
+    "grams": 175,
+    "category": "SPOR"
+  },
+  "cesit-bowlingball-01": {
+    "grams": 6000,
+    "category": "SPOR"
+  },
+  "cesit-baseballbat-01": {
+    "grams": 900,
+    "category": "SPOR"
+  },
+  "cesit-snorkel-01": {
+    "grams": 150,
+    "category": "SPOR"
+  },
+  "cesit-skis-01": {
+    "grams": 5000,
+    "category": "SPOR"
+  },
+  "cesit-violin-01": {
+    "grams": 450,
+    "category": "MÜZİK"
+  },
+  "cesit-recorder-01": {
+    "grams": 100,
+    "category": "MÜZİK"
+  },
+  "cesit-tambourine-01": {
+    "grams": 250,
+    "category": "MÜZİK"
+  },
+  "cesit-drumstick-01": {
+    "grams": 100,
+    "category": "MÜZİK"
+  },
+  "cesit-magnifier-01": {
+    "grams": 100,
+    "category": "KIRTASİYE"
+  },
+  "cesit-wateringhose-01": {
+    "grams": 2000,
+    "category": "BAHÇE"
   }
 }
