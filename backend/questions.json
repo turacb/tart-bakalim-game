@@ -478,5 +478,85 @@
   "cesit-radiator-01": {
     "grams": 7000,
     "category": "EV ALETLERİ"
+  },
+  "cesit-gloves-01": {
+    "grams": 120,
+    "category": "GİYİM"
+  },
+  "cesit-scarf-01": {
+    "grams": 180,
+    "category": "GİYİM"
+  },
+  "cesit-shirt-01": {
+    "grams": 220,
+    "category": "GİYİM"
+  },
+  "cesit-bathrobe-01": {
+    "grams": 1100,
+    "category": "EV TEKSTİLİ"
+  },
+  "cesit-socks-01": {
+    "grams": 50,
+    "category": "GİYİM"
+  },
+  "cesit-tie-01": {
+    "grams": 55,
+    "category": "GİYİM"
+  },
+  "cesit-dress-01": {
+    "grams": 300,
+    "category": "GİYİM"
+  },
+  "cesit-apron-01": {
+    "grams": 150,
+    "category": "GİYİM"
+  },
+  "cesit-hairbrush-01": {
+    "grams": 80,
+    "category": "KİŞİSEL BAKIM"
+  },
+  "cesit-nailclipper-01": {
+    "grams": 18,
+    "category": "KİŞİSEL BAKIM"
+  },
+  "cesit-tweezers-01": {
+    "grams": 12,
+    "category": "KİŞİSEL BAKIM"
+  },
+  "cesit-shaver-01": {
+    "grams": 180,
+    "category": "KİŞİSEL BAKIM"
+  },
+  "cesit-makeupbrush-01": {
+    "grams": 30,
+    "category": "KİŞİSEL BAKIM"
+  },
+  "cesit-hotwaterbottle-01": {
+    "grams": 280,
+    "category": "KİŞİSEL EŞYALAR"
+  },
+  "cesit-rubberboot-01": {
+    "grams": 750,
+    "category": "GİYİM"
+  },
+  "cesit-sewingmachine-01": {
+    "grams": 6000,
+    "category": "EV ALETLERİ"
+  },
+  "cesit-spoolthread-01": {
+    "grams": 15,
+    "category": "HOBİ"
+  },
+  "cesit-thimble-01": {
+    "grams": 5,
+    "category": "HOBİ"
+  },
+  "cesit-button-01": {
+    "grams": 2,
+    "category": "HOBİ"
+  },
+  "cesit-compactmirror-01": {
+    "grams": 70,
+    "category": "KİŞİSEL EŞYALAR"
   }
 }

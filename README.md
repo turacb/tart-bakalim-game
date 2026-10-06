@@ -12,3 +12,4 @@ API, 60 saniyelik turları sunucuda zamanlayıp her tahmini puanlar. 120 farklı
 
 
 
+
