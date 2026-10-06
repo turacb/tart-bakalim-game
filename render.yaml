@@ -21,3 +21,4 @@ databases:
   - name: tart-bakalim-db
     plan: free
     region: frankfurt
+    ipAllowList: []
