@@ -326,5 +326,77 @@
   "cesit-chessset-01": {
     "grams": 1300,
     "category": "HOBİ"
+  },
+  "cesit-padlock-01": {
+    "grams": 140,
+    "category": "EV ARAÇLARI"
+  },
+  "cesit-flashlight-01": {
+    "grams": 150,
+    "category": "EV ARAÇLARI"
+  },
+  "cesit-laundrybasket-01": {
+    "grams": 650,
+    "category": "TEMİZLİK"
+  },
+  "cesit-wateringcan-01": {
+    "grams": 350,
+    "category": "BAHÇE"
+  },
+  "cesit-hanger-01": {
+    "grams": 100,
+    "category": "GİYİM AKSESUARLARI"
+  },
+  "cesit-comb-01": {
+    "grams": 20,
+    "category": "KİŞİSEL BAKIM"
+  },
+  "cesit-shoehorn-01": {
+    "grams": 70,
+    "category": "EV ARAÇLARI"
+  },
+  "cesit-flask-01": {
+    "grams": 180,
+    "category": "MUTFAK"
+  },
+  "cesit-colander-01": {
+    "grams": 300,
+    "category": "MUTFAK"
+  },
+  "cesit-rollingpin-01": {
+    "grams": 450,
+    "category": "MUTFAK"
+  },
+  "cesit-whisk-01": {
+    "grams": 65,
+    "category": "MUTFAK"
+  },
+  "cesit-grater-01": {
+    "grams": 220,
+    "category": "MUTFAK"
+  },
+  "cesit-ladle-01": {
+    "grams": 120,
+    "category": "MUTFAK"
+  },
+  "cesit-corkscrew-01": {
+    "grams": 150,
+    "category": "MUTFAK"
+  },
+  "cesit-flowerpot-01": {
+    "grams": 950,
+    "category": "BAHÇE"
+  },
+  "cesit-extensioncord-01": {
+    "grams": 350,
+    "category": "EV ARAÇLARI"
+  },
+  "cesit-alarmclock-01": {
+    "grams": 250,
+    "category": "EV AKSESUARLARI"
+  },
+  "cesit-vase-01": {
+    "grams": 700,
+    "category": "EV AKSESUARLARI"
   }
 }
