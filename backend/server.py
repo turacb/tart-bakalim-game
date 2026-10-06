@@ -85,7 +85,7 @@ def best_query():
     return """
         WITH best AS (
             SELECT DISTINCT ON (lower(name)) name, lower(name) AS key, score, answered, finished_at
-            FROM runs WHERE finished_at IS NOT NULL
+            FROM runs WHERE finished_at IS NOT NULL AND answered > 0
             ORDER BY lower(name), score DESC, answered DESC, finished_at ASC
         ), ranked AS (
             SELECT name, key, score, answered,
