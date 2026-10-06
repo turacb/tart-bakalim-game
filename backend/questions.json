@@ -278,5 +278,21 @@
   "cesit-toaster-01": {
     "grams": 1500,
     "category": "EV ALETLERİ"
+  },
+  "cesit-scissors-01": {
+    "grams": 90,
+    "category": "EV ARAÇLARI"
+  },
+  "cesit-cuttingboard-01": {
+    "grams": 650,
+    "category": "MUTFAK"
+  },
+  "cesit-broom-01": {
+    "grams": 450,
+    "category": "TEMİZLİK"
+  },
+  "cesit-pot-01": {
+    "grams": 1200,
+    "category": "MUTFAK"
   }
 }
