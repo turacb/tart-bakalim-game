@@ -294,5 +294,37 @@
   "cesit-pot-01": {
     "grams": 1200,
     "category": "MUTFAK"
+  },
+  "cesit-skateboard-01": {
+    "grams": 2300,
+    "category": "SPOR"
+  },
+  "cesit-guitar-01": {
+    "grams": 2100,
+    "category": "MÜZİK"
+  },
+  "cesit-tennisracket-01": {
+    "grams": 300,
+    "category": "SPOR"
+  },
+  "cesit-swimgoggles-01": {
+    "grams": 35,
+    "category": "SPOR"
+  },
+  "cesit-harmonica-01": {
+    "grams": 65,
+    "category": "MÜZİK"
+  },
+  "cesit-sleepingbag-01": {
+    "grams": 1100,
+    "category": "KAMP"
+  },
+  "cesit-binoculars-01": {
+    "grams": 650,
+    "category": "HOBİ"
+  },
+  "cesit-chessset-01": {
+    "grams": 1300,
+    "category": "HOBİ"
   }
 }
