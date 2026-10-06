@@ -638,5 +638,85 @@
   "cesit-wateringhose-01": {
     "grams": 2000,
     "category": "BAHÇE"
+  },
+  "cesit-lightbulb-01": {
+    "grams": 60,
+    "category": "AYDINLATMA"
+  },
+  "cesit-desklamp-01": {
+    "grams": 1200,
+    "category": "AYDINLATMA"
+  },
+  "cesit-router-01": {
+    "grams": 250,
+    "category": "ELEKTRONİK"
+  },
+  "cesit-usbdrive-01": {
+    "grams": 12,
+    "category": "ELEKTRONİK"
+  },
+  "cesit-harddrive-01": {
+    "grams": 180,
+    "category": "ELEKTRONİK"
+  },
+  "cesit-charger-01": {
+    "grams": 60,
+    "category": "ELEKTRONİK"
+  },
+  "cesit-projector-01": {
+    "grams": 1800,
+    "category": "ELEKTRONİK"
+  },
+  "cesit-doorhandle-01": {
+    "grams": 450,
+    "category": "EV DONANIMI"
+  },
+  "cesit-faucet-01": {
+    "grams": 1200,
+    "category": "EV DONANIMI"
+  },
+  "cesit-toiletseat-01": {
+    "grams": 1800,
+    "category": "EV DONANIMI"
+  },
+  "cesit-garlicpress-01": {
+    "grams": 180,
+    "category": "MUTFAK"
+  },
+  "cesit-mortar-01": {
+    "grams": 2000,
+    "category": "MUTFAK"
+  },
+  "cesit-bakingtray-01": {
+    "grams": 600,
+    "category": "MUTFAK"
+  },
+  "cesit-funnel-01": {
+    "grams": 30,
+    "category": "MUTFAK"
+  },
+  "cesit-teapot-01": {
+    "grams": 700,
+    "category": "MUTFAK"
+  },
+  "cesit-manualgrinder-01": {
+    "grams": 450,
+    "category": "MUTFAK"
+  },
+  "cesit-blender-01": {
+    "grams": 3200,
+    "category": "EV ALETLERİ"
+  },
+  "cesit-teddybear-01": {
+    "grams": 200,
+    "category": "OYUNCAK"
+  },
+  "cesit-toycar-01": {
+    "grams": 80,
+    "category": "OYUNCAK"
+  },
+  "cesit-rubberduck-01": {
+    "grams": 40,
+    "category": "OYUNCAK"
   }
 }
