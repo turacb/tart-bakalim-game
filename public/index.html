@@ -94,7 +94,7 @@ let state = freshState();
 function freshState() {
   return { phase: "start", name: "", sessionId: "", deadline: 0, timer: null, question: null,
     questionStartedAt: 0, deck: [], lastId: "", score: 0, answered: 0, closeCount: 0,
-    combo: 0, riskAvailable: true, riskActive: false, guess: "", busy: false };
+    combo: 0, riskAvailable: true, riskActive: false, guess: "", busy: false, pausedAt: 0 };
 }
 function showScreen(name) {
   for (const screen of document.querySelectorAll(".screen")) screen.hidden = screen.id !== name + "-screen";
@@ -254,7 +254,7 @@ function formatTime(seconds) {
 }
 function updateTimer() {
   if (!state.deadline || state.phase === "end" || state.phase === "start") return;
-  const remain = Math.max(0, (state.deadline - Date.now()) / 1000);
+  const remain = Math.max(0, (state.deadline - (state.pausedAt || Date.now())) / 1000);
   $("time-label").textContent = formatTime(remain);
   $("reveal-time-label").textContent = formatTime(remain);
   $("time-fill").style.width = (remain / ROUND_SECONDS * 100) + "%";
@@ -289,9 +289,11 @@ async function submitGuess() {
   }
   if (Date.now() >= state.deadline) { finishGame(); return; }
   state.busy = true;
-  $("input-message").textContent = API ? "Puan hesaplanıyor…" : "";
+  state.pausedAt = API ? Date.now() : 0;
+  $("input-message").textContent = API ? "Puan hesaplanıyor… Süre durduruldu." : "";
   try {
     const result = API ? await api("guess", { session_id: state.sessionId, guess, risk: state.riskActive }) : localGuess(guess, state.riskActive);
+    resumeTimer(result);
     if (result.finished) { showEnd(result); return; }
     state.score = result.score;
     state.answered = result.answered;
@@ -301,7 +303,14 @@ async function submitGuess() {
     showResult(result, guess);
   } catch (error) {
     $("input-message").textContent = "Tahmin gönderilemedi: " + error.message;
-  } finally { state.busy = false; }
+  } finally { resumeTimer(); state.busy = false; }
+}
+function resumeTimer(response) {
+  if (!state.pausedAt) return;
+  state.deadline = response && Number.isFinite(response.round_ms)
+    ? Date.now() + response.round_ms
+    : state.deadline + Date.now() - state.pausedAt;
+  state.pausedAt = 0;
 }
 function showResult(result, guess) {
   const question = state.question;
@@ -338,17 +347,20 @@ async function next() {
   if (state.phase !== "reveal" || state.busy) return;
   if (Date.now() >= state.deadline) { finishGame(); return; }
   state.busy = true;
+  state.pausedAt = API ? Date.now() : 0;
   $("next-button").disabled = true;
   try {
     const localId = API ? null : nextLocalId();
     const response = API ? await api("next", { session_id: state.sessionId }) : localId
       ? { question: { id: localId } }
       : { finished: true, score: state.score, answered: state.answered, close_count: state.closeCount, rank: null };
+    resumeTimer(response);
     if (response.finished) showEnd(response);
     else showQuestion(response.question.id);
   } catch (error) {
     $("round-summary").textContent = "Sonraki soru alınamadı: " + error.message;
   } finally {
+    resumeTimer();
     state.busy = false;
     $("next-button").disabled = false;
   }

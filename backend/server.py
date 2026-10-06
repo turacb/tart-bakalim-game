@@ -1,6 +1,8 @@
 """Sixty-second multiplayer score API for Tart Bakalım."""
 
 from datetime import datetime, timedelta, timezone
+from contextlib import contextmanager
+from queue import LifoQueue, Empty, Full
 from pathlib import Path
 import json
 import os
@@ -20,6 +22,7 @@ ORIGIN = "https://tart-bakalim-game.onrender.com"
 DATABASE_URL = os.environ.get("DATABASE_URL", "")
 schema_lock = threading.Lock()
 schema_ready = False
+idle_connections = LifoQueue(maxsize=4)
 
 
 def varied_deck():
@@ -44,7 +47,7 @@ def varied_deck():
     return deck
 
 
-def database():
+def open_database():
     global schema_ready
     if not DATABASE_URL:
         raise RuntimeError("DATABASE_URL is required")
@@ -75,6 +78,40 @@ def database():
                 conn.commit()
                 schema_ready = True
     return conn
+
+
+@contextmanager
+def database():
+    try:
+        conn = idle_connections.get_nowait()
+    except Empty:
+        conn = open_database()
+    if conn.closed:
+        conn = open_database()
+    try:
+        with conn.transaction():
+            yield conn
+    finally:
+        if not conn.closed:
+            try:
+                idle_connections.put_nowait(conn)
+            except Full:
+                conn.close()
+
+
+def credit_processing(cur, run, received_at, new_question=False):
+    """Server/DB waiting does not consume the player's sixty seconds."""
+    ready_at = datetime.now(timezone.utc)
+    run["started_at"] += max(timedelta(0), ready_at - received_at)
+    if new_question:
+        run["question_started_at"] = ready_at
+    cur.execute("UPDATE runs SET started_at=%s, question_started_at=%s WHERE id=%s",
+                (run["started_at"], run["question_started_at"], run["id"]))
+
+
+def round_clock(run):
+    return {"round_ms": round(seconds_left(run, datetime.now(timezone.utc)) * 1000),
+            "ends_at": (run["started_at"] + timedelta(seconds=run["duration_seconds"])).isoformat()}
 
 
 def error(message, status=400):
@@ -194,6 +231,7 @@ def start():
     session_id = uuid4()
     with database() as conn:
         with conn.cursor() as cur:
+            now = datetime.now(timezone.utc)
             cur.execute("""
                 INSERT INTO runs (id, name, started_at, question_started_at, deck, duration_seconds)
                 VALUES (%s, %s, %s, %s, %s, 60)
@@ -228,13 +266,14 @@ def guess():
             score = run["score"] + result["points"]
             answered = run["answered"] + 1
             close_count = run["close_count"] + int(result["near"])
+            credit_processing(cur, run, now)
             cur.execute("""
                 UPDATE runs SET score=%s, answered=%s, close_count=%s, combo=%s,
                     risk_used=%s, awaiting_next=true WHERE id=%s
             """, (score, answered, close_count, result["nextCombo"], run["risk_used"] or risk, session_id))
     return jsonify(**result, target=TARGETS[card_id]["grams"], score=score, answered=answered,
                    close_count=close_count, risk_available=not (run["risk_used"] or risk),
-                   seconds_left=speed_seconds)
+                   seconds_left=speed_seconds, **round_clock(run))
 
 
 @app.post("/api/next")
@@ -257,11 +296,12 @@ def next_question():
             index = run["deck_index"] + 1
             if index >= len(deck):
                 return jsonify(finish_run(cur, run, now))
+            credit_processing(cur, run, now, new_question=True)
             cur.execute("""
                 UPDATE runs SET deck=%s, deck_index=%s, question_started_at=%s,
                     awaiting_next=false WHERE id=%s
-            """, (json.dumps(deck), index, now, session_id))
-    return jsonify(question={"id": deck[index]}, ends_at=(run["started_at"] + timedelta(seconds=run["duration_seconds"])).isoformat())
+            """, (json.dumps(deck), index, run["question_started_at"], session_id))
+    return jsonify(question={"id": deck[index]}, **round_clock(run))
 
 
 @app.post("/api/finish")
