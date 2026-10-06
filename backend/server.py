@@ -1,4 +1,4 @@
-"""Two-minute multiplayer score API for Tart Bakalım."""
+"""Sixty-second multiplayer score API for Tart Bakalım."""
 
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -49,6 +49,7 @@ def database():
                         )
                     """)
                     cur.execute("CREATE INDEX IF NOT EXISTS runs_score_idx ON runs (score DESC, answered DESC) WHERE finished_at IS NOT NULL")
+                    cur.execute("ALTER TABLE runs ADD COLUMN IF NOT EXISTS duration_seconds integer NOT NULL DEFAULT 120")
                 conn.commit()
                 schema_ready = True
     return conn
@@ -71,13 +72,13 @@ def run_id(data):
 
 
 def seconds_left(run, now):
-    return max(0.0, (run["started_at"] + timedelta(seconds=120) - now).total_seconds())
+    return max(0.0, (run["started_at"] + timedelta(seconds=run["duration_seconds"]) - now).total_seconds())
 
 
 def expire_runs(cur):
     cur.execute("""
-        UPDATE runs SET finished_at = started_at + interval '120 seconds'
-        WHERE finished_at IS NULL AND started_at + interval '120 seconds' <= now()
+        UPDATE runs SET finished_at = started_at + duration_seconds * interval '1 second'
+        WHERE finished_at IS NULL AND started_at + duration_seconds * interval '1 second' <= now()
     """)
 
 
@@ -85,7 +86,7 @@ def best_query():
     return """
         WITH best AS (
             SELECT DISTINCT ON (lower(name)) name, lower(name) AS key, score, answered, finished_at
-            FROM runs WHERE finished_at IS NOT NULL AND answered > 0
+            FROM runs WHERE finished_at IS NOT NULL AND answered > 0 AND duration_seconds = 60
             ORDER BY lower(name), score DESC, answered DESC, finished_at ASC
         ), ranked AS (
             SELECT name, key, score, answered,
@@ -109,7 +110,7 @@ def summary(cur, run):
 
 def finish_run(cur, run, now):
     if run["finished_at"] is None:
-        cur.execute("UPDATE runs SET finished_at = %s WHERE id = %s", (min(now, run["started_at"] + timedelta(seconds=120)), run["id"]))
+        cur.execute("UPDATE runs SET finished_at = %s WHERE id = %s", (min(now, run["started_at"] + timedelta(seconds=run["duration_seconds"])), run["id"]))
         run["finished_at"] = now
     return summary(cur, run)
 
@@ -173,10 +174,10 @@ def start():
     with database() as conn:
         with conn.cursor() as cur:
             cur.execute("""
-                INSERT INTO runs (id, name, started_at, question_started_at, deck)
-                VALUES (%s, %s, %s, %s, %s)
+                INSERT INTO runs (id, name, started_at, question_started_at, deck, duration_seconds)
+                VALUES (%s, %s, %s, %s, %s, 60)
             """, (session_id, name, now, now, json.dumps(deck)))
-    return jsonify(session_id=str(session_id), ends_at=(now + timedelta(seconds=120)).isoformat(), question={"id": deck[0]})
+    return jsonify(session_id=str(session_id), ends_at=(now + timedelta(seconds=60)).isoformat(), question={"id": deck[0]})
 
 
 @app.post("/api/guess")
@@ -234,17 +235,12 @@ def next_question():
             deck = json.loads(run["deck"])
             index = run["deck_index"] + 1
             if index >= len(deck):
-                last_id = deck[-1]
-                deck = list(TARGETS)
-                random.SystemRandom().shuffle(deck)
-                if len(deck) > 1 and deck[0] == last_id:
-                    deck[0], deck[1] = deck[1], deck[0]
-                index = 0
+                return jsonify(finish_run(cur, run, now))
             cur.execute("""
                 UPDATE runs SET deck=%s, deck_index=%s, question_started_at=%s,
                     awaiting_next=false WHERE id=%s
             """, (json.dumps(deck), index, now, session_id))
-    return jsonify(question={"id": deck[index]}, ends_at=(run["started_at"] + timedelta(seconds=120)).isoformat())
+    return jsonify(question={"id": deck[index]}, ends_at=(run["started_at"] + timedelta(seconds=run["duration_seconds"])).isoformat())
 
 
 @app.post("/api/finish")
