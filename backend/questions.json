@@ -398,5 +398,85 @@
   "cesit-vase-01": {
     "grams": 700,
     "category": "EV AKSESUARLARI"
+  },
+  "cesit-foldingchair-01": {
+    "grams": 4000,
+    "category": "MOBİLYA"
+  },
+  "cesit-stool-01": {
+    "grams": 2200,
+    "category": "MOBİLYA"
+  },
+  "cesit-suitcase-01": {
+    "grams": 2700,
+    "category": "ÇANTA VE AKSESUAR"
+  },
+  "cesit-bucket-01": {
+    "grams": 400,
+    "category": "TEMİZLİK"
+  },
+  "cesit-sponge-01": {
+    "grams": 10,
+    "category": "TEMİZLİK"
+  },
+  "cesit-deskfan-01": {
+    "grams": 1500,
+    "category": "EV ALETLERİ"
+  },
+  "cesit-vacuum-01": {
+    "grams": 5500,
+    "category": "EV ALETLERİ"
+  },
+  "cesit-ironingboard-01": {
+    "grams": 4500,
+    "category": "EV EŞYALARI"
+  },
+  "cesit-rug-01": {
+    "grams": 700,
+    "category": "EV TEKSTİLİ"
+  },
+  "cesit-calculator-01": {
+    "grams": 120,
+    "category": "KIRTASİYE"
+  },
+  "cesit-notebook-01": {
+    "grams": 280,
+    "category": "KIRTASİYE"
+  },
+  "cesit-clipboard-01": {
+    "grams": 180,
+    "category": "KIRTASİYE"
+  },
+  "cesit-tapedispenser-01": {
+    "grams": 500,
+    "category": "KIRTASİYE"
+  },
+  "cesit-trafficcone-01": {
+    "grams": 1000,
+    "category": "DIŞ MEKÂN"
+  },
+  "cesit-brick-01": {
+    "grams": 2000,
+    "category": "YAPI MALZEMELERİ"
+  },
+  "cesit-chain-01": {
+    "grams": 800,
+    "category": "EL ALETLERİ"
+  },
+  "cesit-rope-01": {
+    "grams": 400,
+    "category": "DIŞ MEKÂN"
+  },
+  "cesit-safetyvest-01": {
+    "grams": 120,
+    "category": "KORUYUCU EKİPMAN"
+  },
+  "cesit-bicyclepump-01": {
+    "grams": 800,
+    "category": "EL ALETLERİ"
+  },
+  "cesit-radiator-01": {
+    "grams": 7000,
+    "category": "EV ALETLERİ"
   }
 }
