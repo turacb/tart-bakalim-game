@@ -718,5 +718,53 @@
   "cesit-rubberduck-01": {
     "grams": 40,
     "category": "OYUNCAK"
+  },
+  "cesit-handheldconsole-01": {
+    "grams": 275,
+    "category": "OYUN VE HOBİ"
+  },
+  "cesit-trackpad-01": {
+    "grams": 230,
+    "category": "ELEKTRONİK"
+  },
+  "cesit-multimeter-01": {
+    "grams": 550,
+    "category": "EL ALETLERİ"
+  },
+  "cesit-guitarpedal-01": {
+    "grams": 360,
+    "category": "MÜZİK"
+  },
+  "cesit-vrheadset-01": {
+    "grams": 520,
+    "category": "OYUN VE HOBİ"
+  },
+  "cesit-drone-01": {
+    "grams": 249,
+    "category": "ELEKTRONİK"
+  },
+  "cesit-deskphone-01": {
+    "grams": 650,
+    "category": "OFİS"
+  },
+  "cesit-microscope-01": {
+    "grams": 1800,
+    "category": "BİLİM"
+  },
+  "cesit-metronome-01": {
+    "grams": 450,
+    "category": "MÜZİK"
+  },
+  "cesit-walkietalkie-01": {
+    "grams": 220,
+    "category": "ELEKTRONİK"
+  },
+  "cesit-printer-01": {
+    "grams": 4200,
+    "category": "OFİS"
+  },
+  "cesit-carbattery-01": {
+    "grams": 15000,
+    "category": "TAŞIT PARÇALARI"
   }
 }
