@@ -766,5 +766,85 @@
   "cesit-carbattery-01": {
     "grams": 15000,
     "category": "TAŞIT PARÇALARI"
+  },
+  "cesit-eraser-01": {
+    "grams": 20,
+    "category": "KIRTASİYE"
+  },
+  "cesit-ruler-01": {
+    "grams": 30,
+    "category": "KIRTASİYE"
+  },
+  "cesit-sharpener-01": {
+    "grams": 8,
+    "category": "KIRTASİYE"
+  },
+  "cesit-binderclip-01": {
+    "grams": 10,
+    "category": "KIRTASİYE"
+  },
+  "cesit-holepunch-01": {
+    "grams": 250,
+    "category": "OFİS"
+  },
+  "cesit-drawingcompass-01": {
+    "grams": 35,
+    "category": "KIRTASİYE"
+  },
+  "cesit-whiteboarderaser-01": {
+    "grams": 70,
+    "category": "OFİS"
+  },
+  "cesit-globe-01": {
+    "grams": 700,
+    "category": "OFİS"
+  },
+  "cesit-spatula-01": {
+    "grams": 60,
+    "category": "MUTFAK GEREÇLERİ"
+  },
+  "cesit-peeler-01": {
+    "grams": 45,
+    "category": "MUTFAK GEREÇLERİ"
+  },
+  "cesit-canopener-01": {
+    "grams": 180,
+    "category": "MUTFAK GEREÇLERİ"
+  },
+  "cesit-lunchbox-01": {
+    "grams": 220,
+    "category": "MUTFAK GEREÇLERİ"
+  },
+  "cesit-dinnerplate-01": {
+    "grams": 550,
+    "category": "SOFRA"
+  },
+  "cesit-fork-01": {
+    "grams": 45,
+    "category": "SOFRA"
+  },
+  "cesit-kitchenknife-01": {
+    "grams": 180,
+    "category": "MUTFAK GEREÇLERİ"
+  },
+  "cesit-ovenmitt-01": {
+    "grams": 90,
+    "category": "MUTFAK TEKSTİLİ"
+  },
+  "cesit-dogbowl-01": {
+    "grams": 180,
+    "category": "EVCİL HAYVAN"
+  },
+  "cesit-dogleash-01": {
+    "grams": 150,
+    "category": "EVCİL HAYVAN"
+  },
+  "cesit-dogcollar-01": {
+    "grams": 60,
+    "category": "EVCİL HAYVAN"
+  },
+  "cesit-petcarrier-01": {
+    "grams": 1700,
+    "category": "EVCİL HAYVAN"
   }
 }
