@@ -846,5 +846,85 @@
   "cesit-petcarrier-01": {
     "grams": 1700,
     "category": "EVCİL HAYVAN"
+  },
+  "cesit-golfball-01": {
+    "grams": 45,
+    "category": "SPOR"
+  },
+  "cesit-shuttlecock-01": {
+    "grams": 5,
+    "category": "SPOR"
+  },
+  "cesit-baseball-01": {
+    "grams": 145,
+    "category": "SPOR"
+  },
+  "cesit-boxinggloves-01": {
+    "grams": 600,
+    "category": "SPOR"
+  },
+  "cesit-inlineboot-01": {
+    "grams": 1300,
+    "category": "SPOR"
+  },
+  "cesit-swimfins-01": {
+    "grams": 1500,
+    "category": "SPOR"
+  },
+  "cesit-archerybow-01": {
+    "grams": 1200,
+    "category": "SPOR"
+  },
+  "cesit-tent-01": {
+    "grams": 2500,
+    "category": "KAMP"
+  },
+  "cesit-campburner-01": {
+    "grams": 120,
+    "category": "KAMP"
+  },
+  "cesit-carabiner-01": {
+    "grams": 60,
+    "category": "KAMP"
+  },
+  "cesit-compass-01": {
+    "grams": 60,
+    "category": "KAMP"
+  },
+  "cesit-camplantern-01": {
+    "grams": 400,
+    "category": "KAMP"
+  },
+  "cesit-coolbox-01": {
+    "grams": 2500,
+    "category": "KAMP"
+  },
+  "cesit-fishingrod-01": {
+    "grams": 450,
+    "category": "BALIKÇILIK"
+  },
+  "cesit-steeringwheel-01": {
+    "grams": 1500,
+    "category": "TAŞIT PARÇALARI"
+  },
+  "cesit-wiperblade-01": {
+    "grams": 150,
+    "category": "TAŞIT PARÇALARI"
+  },
+  "cesit-brakedisc-01": {
+    "grams": 6000,
+    "category": "TAŞIT PARÇALARI"
+  },
+  "cesit-alloywheel-01": {
+    "grams": 9500,
+    "category": "TAŞIT PARÇALARI"
+  },
+  "cesit-carjack-01": {
+    "grams": 3500,
+    "category": "TAŞIT PARÇALARI"
+  },
+  "cesit-bicyclebell-01": {
+    "grams": 50,
+    "category": "TAŞIT PARÇALARI"
   }
 }
