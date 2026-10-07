@@ -1086,5 +1086,53 @@
   "cesit-ereader-01": {
     "grams": 200,
     "category": "ELEKTRONİK"
+  },
+  "cesit-diningchair-01": {
+    "grams": 4500,
+    "category": "MOBİLYA"
+  },
+  "cesit-coffeetable-01": {
+    "grams": 8000,
+    "category": "MOBİLYA"
+  },
+  "cesit-wallshelf-01": {
+    "grams": 1800,
+    "category": "EV DONANIMI"
+  },
+  "cesit-curtain-01": {
+    "grams": 900,
+    "category": "EV TEKSTİLİ"
+  },
+  "cesit-doormat-01": {
+    "grams": 700,
+    "category": "EV TEKSTİLİ"
+  },
+  "cesit-photoframe-01": {
+    "grams": 350,
+    "category": "EV DONANIMI"
+  },
+  "cesit-bicyclepedals-01": {
+    "grams": 400,
+    "category": "TAŞIT PARÇALARI"
+  },
+  "cesit-bicyclesaddle-01": {
+    "grams": 300,
+    "category": "TAŞIT PARÇALARI"
+  },
+  "cesit-xylophone-01": {
+    "grams": 800,
+    "category": "MÜZİK"
+  },
+  "cesit-maracas-01": {
+    "grams": 200,
+    "category": "MÜZİK"
+  },
+  "cesit-castanets-01": {
+    "grams": 60,
+    "category": "MÜZİK"
+  },
+  "cesit-chessclock-01": {
+    "grams": 250,
+    "category": "OYUN EKİPMANI"
   }
 }
