@@ -1006,5 +1006,85 @@
   "cesit-doorhinge-01": {
     "grams": 150,
     "category": "EV DONANIMI"
+  },
+  "cesit-washingmachine-01": {
+    "grams": 70000,
+    "category": "EV ALETLERİ"
+  },
+  "cesit-refrigerator-01": {
+    "grams": 60000,
+    "category": "EV ALETLERİ"
+  },
+  "cesit-airfryer-01": {
+    "grams": 4000,
+    "category": "EV ALETLERİ"
+  },
+  "cesit-coffeemachine-01": {
+    "grams": 2200,
+    "category": "EV ALETLERİ"
+  },
+  "cesit-kitchenscale-01": {
+    "grams": 300,
+    "category": "MUTFAK"
+  },
+  "cesit-hairstraightener-01": {
+    "grams": 350,
+    "category": "KİŞİSEL BAKIM"
+  },
+  "cesit-curlingiron-01": {
+    "grams": 300,
+    "category": "KİŞİSEL BAKIM"
+  },
+  "cesit-electrictoothbrush-01": {
+    "grams": 130,
+    "category": "KİŞİSEL BAKIM"
+  },
+  "cesit-smokedetector-01": {
+    "grams": 150,
+    "category": "EV DONANIMI"
+  },
+  "cesit-doorbell-01": {
+    "grams": 180,
+    "category": "EV DONANIMI"
+  },
+  "cesit-thermostat-01": {
+    "grams": 150,
+    "category": "EV DONANIMI"
+  },
+  "cesit-computermonitor-01": {
+    "grams": 3500,
+    "category": "BİLGİSAYAR"
+  },
+  "cesit-computerpsu-01": {
+    "grams": 1500,
+    "category": "BİLGİSAYAR PARÇALARI"
+  },
+  "cesit-rammodule-01": {
+    "grams": 20,
+    "category": "BİLGİSAYAR PARÇALARI"
+  },
+  "cesit-graphicscard-01": {
+    "grams": 900,
+    "category": "BİLGİSAYAR PARÇALARI"
+  },
+  "cesit-cpucooler-01": {
+    "grams": 600,
+    "category": "BİLGİSAYAR PARÇALARI"
+  },
+  "cesit-ssd-01": {
+    "grams": 50,
+    "category": "BİLGİSAYAR PARÇALARI"
+  },
+  "cesit-webcam-01": {
+    "grams": 100,
+    "category": "ELEKTRONİK"
+  },
+  "cesit-microphone-01": {
+    "grams": 300,
+    "category": "SES EKİPMANI"
+  },
+  "cesit-ereader-01": {
+    "grams": 200,
+    "category": "ELEKTRONİK"
   }
 }
