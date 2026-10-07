@@ -926,5 +926,85 @@
   "cesit-bicyclebell-01": {
     "grams": 50,
     "category": "TAŞIT PARÇALARI"
+  },
+  "cesit-gardenrake-01": {
+    "grams": 900,
+    "category": "BAHÇE"
+  },
+  "cesit-pruningshears-01": {
+    "grams": 220,
+    "category": "BAHÇE"
+  },
+  "cesit-wheelbarrow-01": {
+    "grams": 12000,
+    "category": "BAHÇE"
+  },
+  "cesit-hosenozzle-01": {
+    "grams": 180,
+    "category": "BAHÇE"
+  },
+  "cesit-gardentrowel-01": {
+    "grams": 200,
+    "category": "BAHÇE"
+  },
+  "cesit-handsprayer-01": {
+    "grams": 450,
+    "category": "BAHÇE"
+  },
+  "cesit-axe-01": {
+    "grams": 1500,
+    "category": "EL ALETLERİ"
+  },
+  "cesit-rubbermallet-01": {
+    "grams": 550,
+    "category": "EL ALETLERİ"
+  },
+  "cesit-spiritlevel-01": {
+    "grams": 450,
+    "category": "EL ALETLERİ"
+  },
+  "cesit-socketset-01": {
+    "grams": 1200,
+    "category": "EL ALETLERİ"
+  },
+  "cesit-paintroller-01": {
+    "grams": 180,
+    "category": "BOYA VE TAMİR"
+  },
+  "cesit-paintbrush-01": {
+    "grams": 80,
+    "category": "BOYA VE TAMİR"
+  },
+  "cesit-caulkgun-01": {
+    "grams": 450,
+    "category": "BOYA VE TAMİR"
+  },
+  "cesit-sandpaperroll-01": {
+    "grams": 250,
+    "category": "BOYA VE TAMİR"
+  },
+  "cesit-workclamp-01": {
+    "grams": 900,
+    "category": "EL ALETLERİ"
+  },
+  "cesit-solderwire-01": {
+    "grams": 300,
+    "category": "ELEKTRONİK TAMİR"
+  },
+  "cesit-safetygoggles-01": {
+    "grams": 40,
+    "category": "İŞ EKİPMANI"
+  },
+  "cesit-dustmask-01": {
+    "grams": 15,
+    "category": "İŞ EKİPMANI"
+  },
+  "cesit-earmuffs-01": {
+    "grams": 250,
+    "category": "İŞ EKİPMANI"
+  },
+  "cesit-doorhinge-01": {
+    "grams": 150,
+    "category": "EV DONANIMI"
   }
 }
